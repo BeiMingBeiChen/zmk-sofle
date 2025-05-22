@@ -5,11 +5,10 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/outputs.h>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -27,14 +26,72 @@
     trigger-period-ms = <16>;
 };
 
-
 / {
-
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
         tap-ms = <100>;
+    };
+
+    TD0: TD0 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD0";
+        #binding-cells = <0>;
+        bindings = <&mt LEFT_GUI F>;
+    };
+
+    TD1: TD1 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD1";
+        #binding-cells = <0>;
+        bindings = <&mt LEFT_CONTROL D>;
+    };
+
+    TD2: TD2 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD2";
+        #binding-cells = <0>;
+        bindings = <&mt LEFT_SHIFT S>;
+    };
+
+    TD3: TD3 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD3";
+        #binding-cells = <0>;
+        bindings = <&mt LEFT_ALT A>;
+    };
+
+    TD4: TD4 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD4";
+        #binding-cells = <0>;
+        bindings = <&mt RIGHT_GUI J>;
+    };
+
+    TD5: TD5 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD5";
+        #binding-cells = <0>;
+        bindings = <&mt RIGHT_CONTROL K>;
+    };
+
+    TD6: TD6 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD6";
+        #binding-cells = <0>;
+        bindings = <&mt RIGHT_SHIFT L>;
+    };
+
+    TD7: TD7 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD7";
+        #binding-cells = <0>;
+        bindings = <&mt RIGHT_ALT COLON>;
+    };
+
+    behaviors {
     };
 
     keymap {
@@ -42,11 +99,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
-&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+&mo 2       &none      &kp GRAVE     &kp CLCK      &none        &none               &kp UP_ARROW     &rgb_ug RGB_TOG  &none      &kp RA(SCROLLLOCK)    &kp PAUSE_BREAK  &kp UNDER   &mo 3
+&kp TAB     &kp Q      &kp W         &kp E         &kp R        &kp T               &kp DOWN_ARROW   &kp Y            &kp U      &kp I                 &kp O            &kp P       &kp BSLH
+&kp ESCAPE  &TD3       &TD2          &TD1          &TD0         &kp G               &kp LEFT_ARROW   &kp H            &TD4       &TD5                  &TD6             &TD7        &kp BACKSPACE
+&kp LSHFT   &kp Z      &kp X         &kp C         &kp V        &kp B               &kp RIGHT_ARROW  &kp N            &kp M      &kp COMMA             &kp DOT          &kp FSLH    &kp ENTER
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &mt LEFT_GUI TAB    &kp ENTER        &kp SPACE        &lt 1 RET  &mt LEFT_ALT RS(RET)  &kp RIGHT_SHIFT  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;

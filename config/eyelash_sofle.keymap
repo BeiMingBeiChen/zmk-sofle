@@ -35,60 +35,15 @@
         tap-ms = <100>;
     };
 
-    TD0: TD0 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD0";
-        #binding-cells = <0>;
-        bindings = <&mt LEFT_GUI F>;
-    };
+    HomeRow: HomeRow {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW";
+        bindings = <&kp>, <&kp>;
 
-    TD1: TD1 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD1";
-        #binding-cells = <0>;
-        bindings = <&mt LEFT_CONTROL D>;
-    };
-
-    TD2: TD2 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD2";
-        #binding-cells = <0>;
-        bindings = <&mt LEFT_SHIFT S>;
-    };
-
-    TD3: TD3 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD3";
-        #binding-cells = <0>;
-        bindings = <&mt LEFT_ALT A>;
-    };
-
-    TD4: TD4 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD4";
-        #binding-cells = <0>;
-        bindings = <&mt RIGHT_GUI J>;
-    };
-
-    TD5: TD5 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD5";
-        #binding-cells = <0>;
-        bindings = <&mt RIGHT_CONTROL K>;
-    };
-
-    TD6: TD6 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD6";
-        #binding-cells = <0>;
-        bindings = <&mt RIGHT_SHIFT L>;
-    };
-
-    TD7: TD7 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD7";
-        #binding-cells = <0>;
-        bindings = <&mt RIGHT_ALT COLON>;
+        #binding-cells = <2>;
+        require-prior-idle-ms = <100>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
     };
 
     behaviors {

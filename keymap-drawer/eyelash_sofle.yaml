@@ -51,7 +51,7 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - {t: Sft+/, s: 'Sft+?'}
   - {t: '&mt RIGHT_ALT', h: '$$mdi:gesture-tap-hold$$'}
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-command$$
@@ -63,12 +63,12 @@ layers:
   - {t: '&lt 1', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-return$$', h: layer1}
   - {t: 'Sft+$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - RIGHT GUI
   layer1:
-  - {t: '`', s: '~'}
-  - F1
-  - F2
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '6'
+  - '7'
   - F3
   - F4
   - F5
@@ -80,11 +80,11 @@ layers:
   - F10
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', s: '~'}
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - '&mkp MB4'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - PG UP
   - END
@@ -112,7 +112,7 @@ layers:
   - RGB EFR
   - RGB SPI
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - RGB BRI
+  - $$mdi:mouse-right-click-outline$$
   - RGB BRD
   - Ins
   - F11

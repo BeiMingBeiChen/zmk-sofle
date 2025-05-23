@@ -60,7 +60,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: layer 1}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: 'Sft+$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:keyboard-return$$', h: layer 1}
   - {t: 'Sft+$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-control$$

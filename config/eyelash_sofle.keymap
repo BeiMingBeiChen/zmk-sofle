@@ -54,11 +54,11 @@
 
         layer0 {
             bindings = <
-&mo 2       &none         &kp GRAVE         &kp CLCK                &none        &none               &kp UP_ARROW     &rgb_ug RGB_TOG  &none      &kp RA(SCROLLLOCK)       &kp PAUSE_BREAK    &kp UNDER      &mo 3
-&trans      &kp Q         &kp W             &kp E                   &kp R        &kp T               &kp DOWN_ARROW   &kp Y            &kp U      &kp I                    &kp O              &kp P          &kp DELETE
-&kp ESCAPE  &kp A         &kp S             &kp D                   &kp F        &kp G               &kp LEFT_ARROW   &kp H            &kp J      &kp K                    &kp L              &kp COLON      &kp BACKSPACE
-&none       &kp Z         &kp X             &kp C                   &kp V        &kp B               &kp RIGHT_ARROW  &kp N            &kp M      &kp COMMA                &kp DOT            &kp RS(FSLH)   &none
-&kp C_MUTE  &kp LEFT_GUI  &kp LEFT_CONTROL  &mt LEFT_SHIFT LS(TAB)  &lt 1 SPACE  &mt LEFT_GUI TAB    &kp ENTER        &none            &lt 1 RET  &mt RIGHT_SHIFT RS(RET)  &kp RIGHT_CONTROL  &kp RIGHT_GUI
+&mo 2           &none         &kp GRAVE         &kp CLCK                &none        &none               &kp UP_ARROW     &rgb_ug RGB_TOG  &none      &kp RA(SCROLLLOCK)       &kp PAUSE_BREAK    &kp UNDER      &mo 3
+&trans          &kp Q         &kp W             &kp E                   &kp R        &kp T               &kp DOWN_ARROW   &kp Y            &kp U      &kp I                    &kp O              &kp P          &kp DELETE
+&kp ESCAPE      &kp A         &kp S             &kp D                   &kp F        &kp G               &kp LEFT_ARROW   &kp H            &kp J      &kp K                    &kp L              &kp COLON      &kp BACKSPACE
+&sk LEFT_SHIFT  &kp Z         &kp X             &kp C                   &kp V        &kp B               &kp RIGHT_ARROW  &kp N            &kp M      &kp COMMA                &kp DOT            &kp RS(FSLH)   &sk RIGHT_SHIFT
+&kp C_MUTE      &kp LEFT_GUI  &kp LEFT_CONTROL  &mt LEFT_SHIFT LS(TAB)  &lt 1 SPACE  &mt LEFT_GUI TAB    &kp ENTER        &none            &lt 1 RET  &mt RIGHT_SHIFT RS(RET)  &kp RIGHT_CONTROL  &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -67,11 +67,11 @@
 
         layer_1 {
             bindings = <
-&trans      &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9      &kp NUMBER_0         &mmv MOVE_UP     &trans     &trans    &trans         &trans       &kp EQUAL     &trans
-&trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5         &mmv MOVE_DOWN   &kp PG_UP  &kp END   &kp UP         &kp HOME     &trans        &trans
-&trans      &none         &none         &none         &none             &trans               &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN       &kp RIGHT    &kp RS(APOS)  &trans
-&trans      &trans        &trans        &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &mmv MOVE_RIGHT  &mkp RCLK  &trans    &kp RS(COMMA)  &kp RS(DOT)  &kp SLASH     &trans
-&kp C_MUTE  &trans        &trans        &trans        &trans            &trans               &mkp LCLK        &trans     &trans    &trans         &trans       &trans
+&trans      &trans  &trans        &trans        &trans        &trans          &mmv MOVE_UP     &trans     &trans    &trans         &trans       &kp EQUAL         &trans
+&trans      &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &mmv MOVE_DOWN   &kp PG_UP  &kp END   &kp UP         &kp HOME     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans          &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN       &kp RIGHT    &kp RS(APOS)      &trans
+&trans      &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &mmv MOVE_RIGHT  &mkp RCLK  &trans    &kp RS(COMMA)  &kp RS(DOT)  &kp SLASH         &trans
+&kp C_MUTE  &trans  &trans        &trans        &trans        &trans          &mkp LCLK        &trans     &trans    &trans         &trans       &trans
             >;
 
             display-name = "layer1";
@@ -80,11 +80,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans      &trans  &trans       &trans  &trans    &mmv MOVE_UP     &trans  &trans  &trans      &trans     &trans       &trans
-&trans  &trans      &trans  &trans       &trans  &trans    &mmv MOVE_DOWN   &trans  &trans  &trans      &trans     &kp UNDER    &kp PLUS
-&trans  &trans      &trans  &trans       &trans  &trans    &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans  &sys_reset  &trans  &bootloader  &trans  &trans    &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans  &trans      &trans  &trans       &trans  &trans    &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_UP     &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &trans  &trans  &trans  &trans  &kp UNDER  &kp PLUS
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &trans  &trans  &trans  &trans  &kp LBRC   &kp RBRC
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -95,7 +95,7 @@
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &trans  &trans           &trans           &trans           &trans           &trans           &trans
 &trans  &out OUT_BLE  &trans        &trans        &bt BT_CLR_ALL  &bt BT_CLR      &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &trans
 &trans  &out OUT_USB  &trans        &trans        &trans          &trans          &trans  &rgb_ug RGB_EFF  &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &trans
-&trans  &trans        &trans        &bootloader   &sys_reset      &soft_off       &trans  &trans           &trans           &trans           &trans           &trans           &trans
+&trans  &trans        &trans        &bootloader   &soft_off       &sys_reset      &trans  &trans           &trans           &trans           &trans           &trans           &trans
 &trans  &trans        &trans        &trans        &trans          &trans          &trans  &trans           &trans           &trans           &trans           &trans
             >;
         };

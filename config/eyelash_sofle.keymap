@@ -54,11 +54,11 @@
 
         layer0 {
             bindings = <
-&mo 2           &none         &kp GRAVE         &kp CLCK                &none        &none               &kp UP_ARROW     &rgb_ug RGB_TOG  &none      &kp RA(SCROLLLOCK)       &kp PAUSE_BREAK    &kp UNDER      &mo 3
-&trans          &kp Q         &kp W             &kp E                   &kp R        &kp T               &kp DOWN_ARROW   &kp Y            &kp U      &kp I                    &kp O              &kp P          &kp DELETE
-&kp ESCAPE      &kp A         &kp S             &kp D                   &kp F        &kp G               &kp LEFT_ARROW   &kp H            &kp J      &kp K                    &kp L              &kp COLON      &kp BACKSPACE
-&sk LEFT_SHIFT  &kp Z         &kp X             &kp C                   &kp V        &kp B               &kp RIGHT_ARROW  &kp N            &kp M      &kp COMMA                &kp DOT            &kp RS(FSLH)   &sk RIGHT_SHIFT
-&kp C_MUTE      &kp LEFT_GUI  &kp LEFT_CONTROL  &mt LEFT_SHIFT LS(TAB)  &lt 1 SPACE  &mt LEFT_GUI TAB    &kp ENTER        &none            &lt 1 RET  &mt RIGHT_SHIFT RS(RET)  &kp RIGHT_CONTROL  &kp RIGHT_GUI
+&mo 2           &none         &kp GRAVE         &kp CLCK                &none        &none               &kp UP_ARROW     &rgb_ug RGB_TOG    &none      &kp RA(SCROLLLOCK)       &kp PAUSE_BREAK    &kp UNDER      &mo 3
+&trans          &kp Q         &kp W             &kp E                   &kp R        &kp T               &kp DOWN_ARROW   &kp Y              &kp U      &kp I                    &kp O              &kp P          &kp DELETE
+&kp ESCAPE      &kp A         &kp S             &kp D                   &kp F        &kp G               &kp LEFT_ARROW   &kp H              &kp J      &kp K                    &kp L              &kp COLON      &kp BACKSPACE
+&sk LEFT_SHIFT  &kp Z         &kp X             &kp C                   &kp V        &kp B               &kp RIGHT_ARROW  &kp N              &kp M      &kp COMMA                &kp DOT            &kp RS(FSLH)   &sk RIGHT_SHIFT
+&kp C_MUTE      &kp LEFT_GUI  &kp LEFT_CONTROL  &mt LEFT_SHIFT LS(TAB)  &lt 1 SPACE  &mt LEFT_GUI TAB    &kp ENTER        &kp RS(BACKSPACE)  &lt 1 RET  &mt RIGHT_SHIFT RS(RET)  &kp RIGHT_CONTROL  &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -80,10 +80,10 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_UP     &trans  &trans  &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &trans  &trans  &trans  &trans  &kp UNDER  &kp PLUS
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &trans  &trans  &trans  &trans  &kp LBRC   &kp RBRC
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_UP     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans  &trans  &trans  &trans  &trans
             >;
 

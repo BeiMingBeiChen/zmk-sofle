@@ -37,13 +37,24 @@
 
     Home_Row: Home_Row {
         compatible = "zmk,behavior-hold-tap";
-        label = "Home_Row";
+        label = "Home-Row";
         bindings = <&kp>, <&kp>;
 
         #binding-cells = <2>;
-        require-prior-idle-ms = <100>;
+        require-prior-idle-ms = <120>;
         flavor = "tap-preferred";
         tapping-term-ms = <200>;
+        quick-tap-ms = <100>;
+    };
+
+    BkSp_Delete: BkSp_Delete {
+        compatible = "zmk,behavior-mod-morph";
+        label = "BkSp/DEL";
+        bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_RSFT|MOD_LSFT)>;
+        keep-mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
     behaviors {
@@ -54,11 +65,11 @@
 
         layer0 {
             bindings = <
-&mo 2           &none                 &kp GRAVE               &kp CLCK                  &none                 &none               &kp UP_ARROW     &rgb_ug RGB_TOG    &none                  &kp RA(SCROLLLOCK)         &kp PAUSE_BREAK          &kp UNDER                  &mo 3
-&trans          &kp Q                 &kp W                   &kp E                     &kp R                 &kp T               &kp DOWN_ARROW   &kp Y              &kp U                  &kp I                      &kp O                    &kp P                      &kp DELETE
-&kp ESCAPE      &Home_Row LEFT_ALT A  &Home_Row LEFT_SHIFT S  &Home_Row LEFT_CONTROL D  &Home_Row LEFT_GUI F  &kp G               &kp LEFT_ARROW   &kp H              &Home_Row RIGHT_GUI J  &Home_Row RIGHT_CONTROL K  &Home_Row RIGHT_SHIFT L  &Home_Row RIGHT_ALT COLON  &kp BACKSPACE
-&sk LEFT_SHIFT  &kp Z                 &kp X                   &kp C                     &kp V                 &kp B               &kp RIGHT_ARROW  &kp N              &kp M                  &kp COMMA                  &kp DOT                  &kp RS(FSLH)               &sk RIGHT_SHIFT
-&kp C_MUTE      &kp LEFT_GUI          &kp LEFT_CONTROL        &mt LEFT_SHIFT LS(TAB)    &lt 1 SPACE           &mt LEFT_GUI TAB    &kp ENTER        &kp RS(BACKSPACE)  &lt 1 RET              &mt RIGHT_SHIFT RS(RET)    &kp RIGHT_CONTROL        &kp RIGHT_GUI
+&mo 2           &none                 &kp GRAVE               &kp CLCK                  &none                 &none               &kp UP_ARROW     &rgb_ug RGB_TOG  &none                  &kp RA(SCROLLLOCK)         &kp PAUSE_BREAK          &kp UNDER                  &mo 3
+&trans          &kp Q                 &kp W                   &kp E                     &kp R                 &kp T               &kp DOWN_ARROW   &kp Y            &kp U                  &kp I                      &kp O                    &kp P                      &kp DELETE
+&kp ESCAPE      &Home_Row LEFT_ALT A  &Home_Row LEFT_SHIFT S  &Home_Row LEFT_CONTROL D  &Home_Row LEFT_GUI F  &kp G               &kp LEFT_ARROW   &kp H            &Home_Row RIGHT_GUI J  &Home_Row RIGHT_CONTROL K  &Home_Row RIGHT_SHIFT L  &Home_Row RIGHT_ALT COLON  &kp BACKSPACE
+&sk LEFT_SHIFT  &kp Z                 &kp X                   &kp C                     &kp V                 &kp B               &kp RIGHT_ARROW  &kp N            &kp M                  &kp COMMA                  &kp DOT                  &kp RS(FSLH)               &sk RIGHT_SHIFT
+&kp C_MUTE      &kp LEFT_GUI          &kp LEFT_CONTROL        &mt LEFT_SHIFT LS(TAB)    &lt 1 SPACE           &mt LEFT_GUI TAB    &kp ENTER        &BkSp_Delete     &lt 1 RET              &mt RIGHT_SHIFT RS(RET)    &kp RIGHT_CONTROL        &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;

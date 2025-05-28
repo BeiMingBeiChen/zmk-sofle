@@ -133,8 +133,8 @@
 &kp C_MUTE  &trans              &trans                    &trans                      &trans                  &trans          &mkp LCLK        &trans     &trans                     &trans                         &trans                        &trans
             >;
 
-            display-name = "layer 1";
             sensor-bindings = <&scroll_encoder>;
+            display-name = "layer 1";
         };
 
         layer_2 {
@@ -147,6 +147,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            display-name = "layer 2";
         };
 
         layer_3 {
@@ -157,6 +158,8 @@
 &trans  &trans        &trans        &bootloader   &soft_off       &sys_reset      &trans  &trans           &trans           &trans           &trans           &trans           &trans
 &trans  &trans        &trans        &trans        &trans          &trans          &trans  &trans           &trans           &trans           &trans           &trans
             >;
+
+            display-name = "layer 3";
         };
     };
 };

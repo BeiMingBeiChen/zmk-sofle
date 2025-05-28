@@ -28,17 +28,17 @@ layers:
   - P
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-esc$$
-  - {t: A, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+  - '&TD4'
+  - '&TD3'
+  - '&TD2'
+  - '&TD1'
   - G
   - $$mdi:arrow-left-bold$$
   - H
-  - {t: J, h: RIGHT GUI}
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: ':', h: '$$mdi:apple-keyboard-option$$'}
+  - '&TD5'
+  - '&TD6'
+  - '&TD7'
+  - '&TD8'
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   - Z
@@ -93,17 +93,17 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: +, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '4', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '5', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '6', h: '$$mdi:apple-keyboard-command$$'}
+  - '&TDb4'
+  - '&TDb3'
+  - '&TDb2'
+  - '&TDb1'
   - {t: '=', s: +}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - PG DN
-  - {t: '$$mdi:arrow-left-bold$$', h: RIGHT GUI}
-  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:arrow-right-bold$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '"', h: '$$mdi:apple-keyboard-option$$'}
+  - '&TDb5'
+  - '&TDb6'
+  - '&TDb7'
+  - '&TDb8'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '-', s: _}
